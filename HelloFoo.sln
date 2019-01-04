@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooFrontend", "FooFrontend\FooFrontend.csproj", "{2053F0B3-770E-4890-B0C9-0C67D5308B7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooFrontend", "FooFrontend\FooFrontend.csproj", "{2053F0B3-770E-4890-B0C9-0C67D5308B7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBackend", "FooBackend\FooBackend.csproj", "{8DEF0A47-41FA-4DA5-AC9A-0594CE2ED1B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FooBackend", "FooBackend\FooBackend.csproj", "{8DEF0A47-41FA-4DA5-AC9A-0594CE2ED1B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7A0ABC5-74A9-4C02-8F5C-E4B780E9BB76}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
