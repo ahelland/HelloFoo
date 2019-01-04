@@ -1,0 +1,2 @@
+## HelloFooBackend - Build Status
+[![Build status](https://batprojects.visualstudio.com/Dockerific/_apis/build/status/HelloFooBack)](https://batprojects.visualstudio.com/Dockerific/_build/latest?definitionId=18)
