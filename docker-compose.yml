@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  foofrontend:
+    image: ${DOCKER_REGISTRY-}foofrontend
+    build:
+      context: .
+      dockerfile: FooFrontend/Dockerfile
+
+  foobackend:
+    image: ${DOCKER_REGISTRY-}foobackend
+    build:
+      context: .
+      dockerfile: FooBackend/Dockerfile
+
