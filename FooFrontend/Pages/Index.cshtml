@@ -1,5 +1,6 @@
 ﻿@page
 @using Microsoft.Extensions.Configuration;
+@using System.Net.Http;
 @inject IConfiguration configuration;
 
 @model IndexModel
@@ -7,6 +8,19 @@
     ViewData["Title"] = "Home page";
 }
 
+@{
+    using (var client = new HttpClient())
+    {
+        var apiAddress = configuration.GetSection("UI_Texts")["api"];
+        string requestUrl = apiAddress;
+        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
+        HttpResponseMessage response = client.SendAsync(request).Result;
+        var responseString = response.Content.ReadAsStringAsync().Result;
+        ViewBag.result = responseString;
+    }
+}
+
 <div class="text-center">
     Greeting: @configuration.GetSection("UI_Texts")["Greeting"]<br />
+    Result of API call: @ViewBag.result;
 </div>
