@@ -11,7 +11,7 @@
 @{
     using (var client = new HttpClient())
     {
-        var apiAddress = configuration.GetSection("UI_Texts")["api"];
+        var apiAddress = configuration.GetSection("API")["api_address"];
         string requestUrl = apiAddress;
         HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
         HttpResponseMessage response = client.SendAsync(request).Result;
