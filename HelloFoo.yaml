@@ -17,6 +17,7 @@ spec:
       app: hellofoo-backend
   template:
     metadata:
+      namespace: hellofoo
       labels:
         app: hellofoo-backend
     spec:
@@ -59,6 +60,7 @@ spec:
       app: hellofoo-frontend
   template:
     metadata:
+      namespace: hellofoo
       labels:
         app: hellofoo-frontend
     spec:
