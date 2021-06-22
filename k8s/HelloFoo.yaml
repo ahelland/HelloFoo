@@ -1,6 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hellofoo
+  labels:
+    name: hellofoo
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: hellofoo
   name: hellofoo-backend
 spec:
   replicas: 1
@@ -9,6 +17,7 @@ spec:
       app: hellofoo-backend
   template:
     metadata:
+      namespace: hellofoo
       labels:
         app: hellofoo-backend
     spec:
@@ -31,6 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: hellofoo
   name: hellofoo-backend
 spec:
   ports:
@@ -41,6 +51,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: hellofoo
   name: hellofoo-frontend
 spec:
   replicas: 1
@@ -49,6 +60,7 @@ spec:
       app: hellofoo-frontend
   template:
     metadata:
+      namespace: hellofoo
       labels:
         app: hellofoo-frontend
     spec:
@@ -77,6 +89,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: hellofoo
   name: hellofoo-frontend
 spec:
   type: LoadBalancer
